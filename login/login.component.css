@@ -1,0 +1,15 @@
+.ab{
+    
+    margin: 0px;
+    padding: 0px;
+    height:700px;
+}
+.abc{
+    background-color: rgb(225, 250, 248);
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset #ff000017 ;
+
+}

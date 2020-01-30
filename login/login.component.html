@@ -1,0 +1,30 @@
+<div class="ab">
+<div class= "row  justify-content-center">
+    <div class= "col-lg-6 col-md-lg-6 col-sm-6 abc shadow m-5 p-5  rounded">
+        <h2 class = "text-center"><em>Login</em></h2 >
+<form [formGroup]= "myReactiveForm" autocomplete="off"  (ngSubmit) = "onCalling()" >
+  <div class="form-group">
+    <label for="exampleInputUsername">UserName</label>
+    <input type="text" placeholder="enter your UserName here" class="form-control" autocomplete="off" formControlName ="username">
+  </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" placeholder="enter your email adress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName ="email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" placeholder="enter your password here" class="form-control"  id="exampleInputPassword1" formControlName ="password">
+    </div>
+
+    <re-captcha (resolved)="resolved($event)" siteKey = "6LdEJc8UAAAAAKbD78O9UMeWQiNq-cOUANBQx4S1" formControlName ="re-captcha"></re-captcha>
+    <br>
+
+   <!-- <a routerLink="/home"> <button type="submit" (click) = "onClick()" [disabled]="!myReactiveForm.valid" class="btn btn-primary">Submit</button> </a> -->
+   <!-- <a routerLink="/home"> <button type="submit"  [disabled]="!myReactiveForm.valid" class="btn btn-primary">Submit</button> </a> -->
+    <button type="submit"  [disabled]="!myReactiveForm.valid" class="btn btn-primary"  >Submit</button> 
+    <!-- <button type="submit" [disabled] ="!form.invalid"  class="btn btn-primary">Submit</button> -->
+    <small id="emailHelp"  class="form-text text-muted">We'll never share your details with anyone else.</small>
+  </form>
+  </div>
+</div>
+</div>
